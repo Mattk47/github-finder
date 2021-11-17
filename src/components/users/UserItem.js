@@ -1,18 +1,20 @@
-import React, { Component } from 'react'
-export default class UserItem extends Component {
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-    render() {
-        const { login, avatar_url, html_url } = this.props.user
-        const avatarStyle = { width: '60px' }
+const UserItem = ({ user }) => {
+    const { login, avatar_url } = user
+    const avatarStyle = { width: '60px' }
 
-        return (
-            <div className='card text-center'>
-                <img src={avatar_url} className='round-img' style={avatarStyle} />
-                <h3>{login}</h3>
-                <div>
-                    <a href={html_url} className='btn btn-dark my-1 '>more info</a>
-                </div>
+    return (
+        <div className='card text-center'>
+            <img src={avatar_url} className='round-img' style={avatarStyle} />
+            <h3>{login}</h3>
+            <div>
+                <Link className='btn btn-dark my-1 ' to={`/user/${login}`} > more info</Link>
             </div>
-        )
-    }
+        </div>
+    )
+
 }
+
+export default UserItem;
