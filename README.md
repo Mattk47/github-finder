@@ -12,7 +12,7 @@
 ## Description
 
 Github Finder is an application to find Github Users by name.
-This project is a React app built using JavaScript. Using Axios to make API calls to the Github API. The app was created with CSS (that was provided as a folder in the course) and was an exercise to get introduced to useContext and useReducer hooks.
+This project is a React app built using JSX using Axios to make calls to the Github API. The app was created with CSS (that was provided as a folder in the course) and was an exercise to get introduced to useContext and useReducer hooks.
 
 ---
 
